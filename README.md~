@@ -5,3 +5,6 @@
 ### 1.1 Đặt tên lớp
 * Tên lớp viết dạng [UpperCamelCase](http://en.wikipedia.org/wiki/CamelCase). (Là danh từ, và viết hoa tất cả các chữ cái đầu,...).
 * Nếu lớp mà được extend từ một lớp thành phần của Android thì tên lớp phải được kết thúc bằng tên của lớp thành phần này. Ví dụ: `SignInActivity`, `SignInFragment`, `ImageUploaderService`, `ChangePasswordDialog`.
+
+### 1.2 Đặt tên Resource files
+Cấu trúc chung viết theo dạng __lowercase_underscore__ (viết thường, phân cách bởi dấu gạch dưới)
