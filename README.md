@@ -22,6 +22,7 @@ Cấu trúc chung viết theo dạng __lowercase_underscore__ (viết thường,
 | Tabs         | tab_            | tab_pressed.9.png         |
 
 Nếu drawable thuộc loại selector thì trạng thái selector sẽ được đặt cùng hậu tố như sau
+
 | State	       | Suffix          | Example                     |
 |--------------|-----------------|-----------------------------|
 | Normal       | `_normal`       | `btn_order_normal.9.png`    |
