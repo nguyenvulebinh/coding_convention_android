@@ -33,6 +33,7 @@ Nếu drawable thuộc loại selector thì trạng thái selector sẽ được
 
 #### 1.2.2 Layout files
 Tên của Layout nên bắt đầu bằng tên của Android components sẽ sử dụng nó, theo sau là tên của class sẽ sử dụng nó. 
+
 Lưu ý: 
 * Nếu Layout được sử dụng như là một phần của `Adapter` hoặc `ListView` thì tên Layout sẽ bắt đầu bằng `item_`. 
 * Nếu Layout là một phần của Layout khác thì tên sẽ được bắt đầu bằng `partial_`.
