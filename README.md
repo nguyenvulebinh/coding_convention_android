@@ -51,7 +51,7 @@ Ví dụ:
 Tên của menu file được đặt tương tự như Layout file: Bắt đầu bằng tên của Android component sẽ sử dụng nó và theo sau là, theo sau là tên của class sẽ sử dụng nó. Lưu ý là không đính kèm từ `menu` vào phần tên vì mặc định những file này đã nằm trong thư mục menu.
 Ví dụ tên lớp `UserActivity` thì menu file sẽ được đặt là `activity_user.xml`. 
 
-## 2. Quy tắc trong code
+## 2. Quy tắc trong code Java
 
 ### 2.1 Đặt tên biến
 
@@ -161,4 +161,38 @@ loadPicture(context,
         clickListener,
         "Title of the picture");
 ```
+
+## 3. Quy tắc trong file XML
+
+### 3.1 Đặt tên Resources
+Cấu trúc chung viết theo dạng __lowercase_underscore__ (viết thường, phân cách bởi dấu gạch dưới)
+#### 3.1.1 Tên ID
+Tên ID bắt đầu bằng chữ viết tắt của view. Ví dụ:
+
+| Element            | Prefix            |
+| -----------------  | ----------------- |
+| `TextView`           | `tv_`             |
+| `ImageView`          | `iv_`            |
+| `Button`             | `b_`           |
+| `Menu`               | `m_`             |
+| `CheckBox`               | `cb_`             |
+
+#### 3.1.2 Đóng tag
+
+Nếu một phần tử XML mà không có nội dung thì phải đóng tag ngay trong thẻ mở. Ví dụ:
+
+```xml
+<TextView
+	android:id="@+id/text_view_profile"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content" />
+```
+
+### 3.2 Thứ tự đặt các thuộc tính trong thẻ XML
+
+1. View Id
+2. Style
+3. Layout width and layout height
+4. Other layout attributes, sorted alphabetically
+5. Remaining attributes, sorted alphabetically
 
