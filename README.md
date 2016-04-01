@@ -9,7 +9,7 @@
 ### 1.2 Đặt tên Resource files
 Cấu trúc chung viết theo dạng __lowercase_underscore__ (viết thường, phân cách bởi dấu gạch dưới)
 
-####1.2.1 Drawable files
+#### 1.2.1 Drawable files
 | Asset Type   | Prefix            |		Example               |
 |--------------| ------------------|-----------------------------|
 | Action bar   | ab_             | ab_stacked.9.png          |
@@ -30,5 +30,19 @@ Nếu drawable thuộc loại selector thì trạng thái selector sẽ được
 | Focused      | `_focused`      | `btn_order_focused.9.png`   |
 | Disabled     | `_disabled`     | `btn_order_disabled.9.png`  |
 | Selected     | `_selected`     | `btn_order_selected.9.png`  |
+
+#### 1.2.2 Layout files
+Tên của Layout nên bắt đầu bằng tên của Android components sẽ sử dụng nó. 
+Lưu ý: 
+* Nếu Layout được sử dụng như là một phần của `Adapter` hoặc `ListView` thì tên Layout sẽ bắt đầu bằng `item_`. 
+* Nếu Layout là một phần của Layout khác thì tên sẽ được bắt đầu bằng `partial_`
+Ví dụ:
+
+| Component        | Class Name             | Layout Name                   |
+| ---------------- | ---------------------- | ----------------------------- |
+| Activity         | `UserProfileActivity`  | `activity_user_profile.xml`   |
+| Fragment         | `SignUpFragment`       | `fragment_sign_up.xml`        |
+| Dialog           | `ChangePasswordDialog` | `dialog_change_password.xml`  |
+| AdapterView item | ---                    | `item_person.xml`             |
 
 
