@@ -82,5 +82,35 @@ public class MyClass {
 | `String url`     | `String URL`     |
 | `long id`        | `long ID`        |
 
+### 2.2 Đặt Log
 
+Lấy tên lớp làm giá trị cho Tag trong hàm ghi Log. Tag thường là hằng và được định nghĩa ở đầu lớp.
 
+Các loại log như VERBOSE hay DEBUG chỉ được sử dụng trong bản debug, trong bản release sẽ phải loại bỏ
+
+Ví dụ: 
+
+```java
+public class MyClass {
+    private static final String TAG = MyClass.class.getSimpleName();
+
+    public myMethod() {
+        Log.e(TAG, "My error message");
+	if (BuildConfig.DEBUG) Log.d(TAG, "mesage");
+    }
+}
+```
+
+### 2.3 Thứ tự đặt tham số trong phương thức
+
+Trong các phương thức biến `Context`(nếu có) thì luôn đặt ở đầu trong danh sách tham số, ngược lại các biến `callback`(nếu có) luôn đặt ở cuối
+
+Ví dụ:
+
+```java
+// Context always goes first
+public User loadUser(Context context, int userId);
+
+// Callbacks always go last
+public void loadUserAsync(Context context, int userId, UserCallback callback);
+```
