@@ -82,6 +82,30 @@ public class MyClass {
 | `String url`     | `String URL`     |
 | `long id`        | `long ID`        |
 
+
+Có các thành phần trong Android sử dụng các cặp Key-value như `SharedPreferences`, `Bundle`, hay `Intent`. Khi sử dụng những thành phần này các Key phải được định nghĩa là các hằng số dạng `static final` và tên được bắt đầu như sau:
+
+| Element            | Field Name Prefix |
+| -----------------  | ----------------- |
+| SharedPreferences  | `PREF_`             |
+| Bundle             | `BUNDLE_`           |
+| Fragment Arguments | `ARGUMENT_`         |
+| Intent Extra       | `EXTRA_`            |
+| Intent Action      | `ACTION_`           |
+
+Ví dụ:
+
+```java
+// Note the value of the field is the same as the name to avoid duplication issues
+static final String PREF_EMAIL = "PREF_EMAIL";
+static final String BUNDLE_AGE = "BUNDLE_AGE";
+static final String ARGUMENT_USER_ID = "ARGUMENT_USER_ID";
+
+// Intent-related items use full package name as value
+static final String EXTRA_SURNAME = "com.myapp.extras.EXTRA_SURNAME";
+static final String ACTION_OPEN_USER = "com.myapp.action.ACTION_OPEN_USER";
+```
+
 ### 2.2 Đặt Log
 
 Lấy tên lớp làm giá trị cho Tag trong hàm ghi Log. Tag thường là hằng và được định nghĩa ở đầu lớp.
