@@ -24,10 +24,10 @@ Cấu trúc chung viết theo dạng __lowercase_underscore__ (viết thường,
 Nếu drawable thuộc loại selector thì trạng thái selector sẽ được đặt cùng hậu tố như sau
 | State	       | Suffix          | Example                     |
 |--------------|-----------------|-----------------------------|
-| Normal       | _normal       	| btn_order_normal.9.png    |
-| Pressed      | _pressed      | btn_order_pressed.9.png   |
-| Focused      | _focused     | btn_order_focused.9.png  |
-| Disabled     | _disabled     | btn_order_disabled.9.png  |
-| Selected     | _selected     | btn_order_selected.9.png  |
+| Normal       | `_normal`       | `btn_order_normal.9.png`    |
+| Pressed      | `_pressed`      | `btn_order_pressed.9.png`   |
+| Focused      | `_focused`      | `btn_order_focused.9.png`   |
+| Disabled     | `_disabled`     | `btn_order_disabled.9.png`  |
+| Selected     | `_selected`     | `btn_order_selected.9.png`  |
 
 
