@@ -51,7 +51,7 @@ Ví dụ:
 Tên của menu file được đặt tương tự như Layout file: Bắt đầu bằng tên của Android component sẽ sử dụng nó và theo sau là, theo sau là tên của class sẽ sử dụng nó. Lưu ý là không đính kèm từ `menu` vào phần tên vì mặc định những file này đã nằm trong thư mục menu.
 Ví dụ tên lớp `UserActivity` thì menu file sẽ được đặt là `activity_user.xml`. 
 
-## 2. Quy tắc đặt tên trong code
+## 2. Quy tắc trong code
 
 ### 2.1 Đặt tên biến
 
@@ -138,3 +138,27 @@ public User loadUser(Context context, int userId);
 // Callbacks always go last
 public void loadUserAsync(Context context, int userId, UserCallback callback);
 ```
+
+### 2.4 Giới hạn độ dài trên một dòng
+
+Một dòng không nên dài quá __100 ký tự__. Nếu một dòng mà dài hơn giới hạn này thì có 2 cách để giảm số ký tự xuống:
+* Extract a local variable or method (preferable).
+* Chia 1 dòng thành nhiều dòng
+
+Ví dụ:
+
+```java
+int longName = anotherVeryLongVariable + anEvenLongerOne - thisRidiculousLongOne
+        + theFinalOne;
+
+Picasso.with(context)
+        .load("http://ribot.co.uk/images/sexyjoe.jpg")
+        .into(imageView);
+
+loadPicture(context,
+        "http://ribot.co.uk/images/sexyjoe.jpg",
+        mImageViewProfilePicture,
+        clickListener,
+        "Title of the picture");
+```
+
