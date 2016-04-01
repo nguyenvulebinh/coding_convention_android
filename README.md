@@ -32,10 +32,11 @@ Nếu drawable thuộc loại selector thì trạng thái selector sẽ được
 | Selected     | `_selected`     | `btn_order_selected.9.png`  |
 
 #### 1.2.2 Layout files
-Tên của Layout nên bắt đầu bằng tên của Android components sẽ sử dụng nó. 
+Tên của Layout nên bắt đầu bằng tên của Android components sẽ sử dụng nó, theo sau là tên của class sẽ sử dụng nó. 
 Lưu ý: 
 * Nếu Layout được sử dụng như là một phần của `Adapter` hoặc `ListView` thì tên Layout sẽ bắt đầu bằng `item_`. 
-* Nếu Layout là một phần của Layout khác thì tên sẽ được bắt đầu bằng `partial_`
+* Nếu Layout là một phần của Layout khác thì tên sẽ được bắt đầu bằng `partial_`.
+
 Ví dụ:
 
 | Component        | Class Name             | Layout Name                   |
@@ -44,5 +45,42 @@ Ví dụ:
 | Fragment         | `SignUpFragment`       | `fragment_sign_up.xml`        |
 | Dialog           | `ChangePasswordDialog` | `dialog_change_password.xml`  |
 | AdapterView item | ---                    | `item_person.xml`             |
+
+#### 1.2.3 Menu files
+
+Tên của menu file được đặt tương tự như Layout file: Bắt đầu bằng tên của Android component sẽ sử dụng nó và theo sau là, theo sau là tên của class sẽ sử dụng nó. Lưu ý là không đính kèm từ `menu` vào phần tên vì mặc định những file này đã nằm trong thư mục menu.
+Ví dụ tên lớp `UserActivity` thì menu file sẽ được đặt là `activity_user.xml`. 
+
+## 2. Quy tắc đặt tên trong code
+
+### 2.1 Đặt tên biến
+
+Việc định nghĩa các biến luôn được đặt ở __đầu file__ và theo các quy tắc sau:
+* Biến private, non-static tên bắt đầu bằng __m__
+* Biến private, static tên bắt đầu bằng __s__
+* Các biến khác viết thường chữ cái đầu, các từ tiếp theo viết hoa chữ cái đầu
+* Biến là hằng thì viết hoa toàn bộ và phân cách bằng dấu gạch dưới
+* Những từ viết tắt thì tất cả các chữ cái của từ đó phải viết hoa
+
+Ví dụ:
+
+```java
+public class MyClass {
+    public static final int SOME_CONSTANT = 42;
+    public int publicField;
+    private static MyClass sSingleton;
+    int mPackagePrivate;
+    private int mPrivate;
+    protected int mProtected;
+}
+```
+
+| Good           | Bad            |
+| -------------- | -------------- |
+| `XmlHttpRequest` | `XMLHTTPRequest` |
+| `getCustomerId`  | `getCustomerID`  |
+| `String url`     | `String URL`     |
+| `long id`        | `long ID`        |
+
 
 
