@@ -13,7 +13,7 @@ Cấu trúc chung viết theo dạng __lowercase_underscore__ (viết thường,
 | Asset Type   | Prefix            |		Example               |
 |--------------| ------------------|-----------------------------|
 | Action bar   | ab_             | ab_stacked.9.png          |
-| Button       | btn_	            | btn_send_pressed.9.png    |
+| Button       | b_	            | b_send_pressed.9.png    |
 | Dialog       | dialog_         | dialog_top.9.png          |
 | Divider      | divider_        | divider_horizontal.9.png  |
 | Icon         | ic_	            | ic_star.png               |
